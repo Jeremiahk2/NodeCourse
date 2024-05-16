@@ -1,0 +1,20 @@
+{
+  "name": "nodecourse",
+  "version": "1.0.0",
+  "description": "Learning project for Node, Jest, Typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "jest": "^29.7.0",
+    "test-jest": "^1.0.1",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}
