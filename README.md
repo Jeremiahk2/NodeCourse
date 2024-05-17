@@ -2,7 +2,7 @@
 Learning project for Node, Jest, Typescript
 
 
-Section Two:
+# Section Two:
 I used the following command to make the initial package.json file:
 npm init -y
 
@@ -23,3 +23,48 @@ AAA principles:
 
 Setup
 Teardown
+
+# Section Three
+
+## F.I.R.S.T principles. 
+Note: these may conflict, and are "suggested guidelines"
+
+- Fast: Faster feedback, faster to read, etc.
+- Isolated: Isolated from other tests as well as external environment. Order shouldn't matter.
+- Repeatable: Same result with same input. Mocks are useful here. Make sure to setup and cleanup.
+- Self-Validating: After the test is finished, the result should be clear: Pass or fail
+- Thorough: Tests should be thorough, cover all cases/paths/scenarios.
+
+## aliases
+
+describe.todo('Need to do this one')
+describe.concurrent: experimental? feature. Run tests at the same time.
+it() and test() are the same thing.
+
+xit = it.skip
+fit = it.only
+
+## Watch mode:
+In package.json, add --watch to the scripts; "jest --watch" to run with watch mode.
+Then, whenever you save something in the watched files, it will re-run your tests automatically. 
+It will also give you some command line options for running your tests again quickly.
+
+## Debugging
+
+Go to https://github.com/microsoft/vscode-recipes
+
+Go to the debugging-jest-tests directory
+
+In the readme, grab the configuration(s) for "Jest Current File" or "Jest All". We used Jest Current File.
+
+Go to the run and debug tab, click "make a new configuration file", and overwrite it with the config you want. It'll put it in launch.json.
+
+Make sure to change anything with .js to .ts
+
+## Coverage
+
+/* istanbul ignore next */
+This comment causes the next line to be ignored by the coverage tool. You can use this to ignore functions, methods, lines, or classes.
+
+Small note: to collect coverage, you need the collectCoverage and collectCoverageFrom configurations in jest.config.ts
+These take time to run, so if you are done testing, it's a good idea to remove them.

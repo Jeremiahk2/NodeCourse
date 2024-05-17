@@ -4,7 +4,7 @@
   "description": "Learning project for Node, Jest, Typescript",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest" 
   },
   "keywords": [],
   "author": "",

@@ -1,9 +1,56 @@
-import { stringInfo } from './../app/Utils';
+import { StringUtils, stringInfo } from './../app/Utils';
 import { getStringInfo, toUpperCase } from "../app/Utils";
 
 
 
 describe('Utils test suite', ()=>{
+
+    describe('StringUtil tests', ()=>{
+
+        let sut: StringUtils; //Let is a normal variable, use this to make a type as well.
+
+        beforeEach(()=>{
+            sut = new StringUtils();
+        })
+
+        it('should return correct upper case', ()=>{
+            const expected = 'ABC'
+            
+            const actual = sut.toUpperCase('abc');
+
+            expect(actual).toBe(expected);
+        })
+  
+        it('should throw error on invalid argument - function', ()=>{
+            function expectError() {
+                const actual = sut.toUpperCase('');
+            }
+            expect(expectError).toThrow();
+            expect(expectError).toThrowError('Invalid argument!');
+        })
+
+        it('should throw error on invalid argument - arrow function', ()=>{
+            function expectError() {
+                const actual = sut.toUpperCase('');
+            }
+            expect(()=> {
+                sut.toUpperCase('');
+            }).toThrow('Invalid argument!');
+        })
+
+        it('should throw error on invalid argument - try catch block', (done)=>{
+            try {
+                sut.toUpperCase('');
+                done('toUpperCase should throw error for invalid arg!');
+            } catch (error) {
+                expect(error).toBeInstanceOf(Error);
+                expect(error).toHaveProperty('message', 'Invalid argument!');
+                done();
+            }
+        })
+    })
+
+
     it('should return uppercase of valid string', ()=>{
         //arrange:
         const sut = toUpperCase;
@@ -16,7 +63,7 @@ describe('Utils test suite', ()=>{
         expect(actual).toBe(expected);
     })
 
-    describe.only('ToUpperCase examples', ()=>{
+    describe('ToUpperCase examples', ()=>{
         it.each([
             {input: 'abc', expected: 'ABC'},
             {input: 'My-String', expected: 'MY-STRING'},
