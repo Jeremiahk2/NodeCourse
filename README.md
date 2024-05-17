@@ -77,3 +77,24 @@ These take time to run, so if you are done testing, it's a good idea to remove t
 - has no lower case letter
 - Return the reason that the password is invalid
 - Admin password should also contain a number
+
+# Section Five
+
+## Test Doubles
+Pretend objects used in place of a real object for testing purposes
+- Dummy objects: passed around but not used
+- Fakes: simplified working implementation, it takes a shortcut
+- Stubs: incomplete objects used as arguments
+- Spies: tracks information about how a unit is called
+- Mocks: preprogrammed with expectations
+Note for jest: mocks and spies have a lot in common
+
+Spies vs mocks:
+- Spies are not directly injected into SUT
+- Original functionality is preserved with spies
+- Spies usually track method calls
+
+## Mocking modules
+For random ID's, run the following commands:
+npm i uuid
+npm i -D @types/uuid
