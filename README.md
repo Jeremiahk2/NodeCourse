@@ -14,3 +14,12 @@ npx ts-jest config:init
 I then deleted that file because apparently it's not needed anymore.
 
 Instead, use jest.config.ts
+
+Structure:
+AAA principles:
+- arrange
+- act
+- assert
+
+Setup
+Teardown
