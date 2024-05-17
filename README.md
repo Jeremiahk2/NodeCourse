@@ -68,3 +68,12 @@ This comment causes the next line to be ignored by the coverage tool. You can us
 
 Small note: to collect coverage, you need the collectCoverage and collectCoverageFrom configurations in jest.config.ts
 These take time to run, so if you are done testing, it's a good idea to remove them.
+
+# Section Four
+
+## Password invalid requirements
+- Length is less than 8 chars
+- has no upper case letter
+- has no lower case letter
+- Return the reason that the password is invalid
+- Admin password should also contain a number
