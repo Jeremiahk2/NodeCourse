@@ -98,3 +98,29 @@ Spies vs mocks:
 For random ID's, run the following commands:
 npm i uuid
 npm i -D @types/uuid
+
+# Section Seven
+
+Low mocks advantage:
+- Test more with less code
+- Easier to write and read
+- Easier to maintain
+Disadvantages:
+- Hard to cover some edge cases
+- Hard to setup in some cases
++ an ideal workflow was presented in this course
++ instad of DB mock, we may have a docker container
++ other services may have to be dockerized
++ CI/CD point of view: a lot more configuration is required.
+
+# Section Eight - Integration testing
+
+Multiple components tested together
+in the previous part we considered a route to be a unit
+There will still be mocked components:
+- Data
+- Server
+
+Goal: Test the system as close as possible to the real deployment
+Testing stage - identical t othe production stage
+- run it locally or remotely
