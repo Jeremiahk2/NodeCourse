@@ -124,3 +124,24 @@ There will still be mocked components:
 Goal: Test the system as close as possible to the real deployment
 Testing stage - identical t othe production stage
 - run it locally or remotely
+
+# Section Nine
+Snapshot testing:
+- test large objects
+- test UI components, generated logic(JSON)
+
+Jest: run tests, mock, assert
+
+Mocha: test
+    SinonJs: mock
+    Chai: assert
+
+Jest advantages:
+- one library
+- easy TS integration
+- popular (better support)
+- test UI features (React)
+
+Mocha advantages:
+- more complex features
+- when(certainCall).thenReturn(certainResult)
